@@ -1,0 +1,11 @@
+# Provenance et modifications
+
+Ce dépôt contient des définitions DocType migrées depuis ERPNext puis adaptées au schéma et aux capacités du moteur xcore-doctype. Les transformations comprennent notamment la modification de champs, liens, conditions, calculs, numérotation et organisation des définitions.
+
+Les définitions ont été extraites de `traoreera/doctype/doctypes` le 10 novembre 2026 ; les changements antérieurs sont conservés dans l’historique Git transféré. Le jeu ne doit pas être présenté comme une copie inchangée d’ERPNext ni comme un ERP complet.
+
+Les éléments dérivés d’ERPNext restent soumis à leurs notices et obligations de licence d’origine. La licence GPL-3.0 incluse concerne la redistribution des éléments couverts ; elle ne prétend pas attribuer à `traoreera01` les droits d’auteur détenus par des tiers. La provenance et l’avis de licence appropriés doivent être conservés lors de toute réutilisation.
+
+Références :
+- [ERPNext](https://github.com/frappe/erpnext)
+- [xcore-doctype — documentation de la migration](https://github.com/traoreera/doctype/blob/master/process/erp-doctypes.md)
