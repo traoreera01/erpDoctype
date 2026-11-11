@@ -8,7 +8,18 @@ Ce dépôt contient le jeu de définitions DocType ERP utilisé par le projet [x
 - Schémas adaptés au contrat xcore-doctype, avec des types numériques exacts, des conditions et calculs pris en charge par le moteur, et des relations entre modules.
 - Ces définitions sont des données de configuration, pas une application ERP complète. Les hooks métier, écritures comptables et traitements transactionnels résident dans les plugins de l'ERP.
 
+La documentation complète du jeu est dans [`docs/`](docs/index.md), au format MkDocs :
+
+- [`docs/index.md`](docs/index.md) — vue d'ensemble et chiffres clés ;
+- [`docs/architecture.md`](docs/architecture.md) — le contrat de schéma tel qu'utilisé par le jeu (types de champs, numérotation, workflows, vues, permissions) ;
+- [`docs/dependances.md`](docs/dependances.md) — matrice complète des dépendances entre modules dans les deux sens ;
+- [`docs/integration.md`](docs/integration.md) — implémenter chaque module en plugin xcore (gabarit, grants, hooks, traductions, validation) ;
+- [`docs/modules/`](docs/modules/) — 22 pages, une par module ;
+- [`docs/reference/`](docs/reference/) — la référence de chaque champ de chaque DocType, **générée** par [`docs/scripts/gen_reference.py`](docs/scripts/gen_reference.py).
+
 La documentation de migration et des transformations est dans [`docs/erp-doctypes.md`](docs/erp-doctypes.md), conservée depuis le dépôt moteur. Le contrat du schéma et les versions du moteur sont documentés dans le [guide xcore-doctype](https://github.com/traoreera/doctype/blob/master/docs/guide.md).
+
+Pour construire ce site localement : `pip install mkdocs && mkdocs build -f mkdocs.cnf` (ou `mkdocs serve -f mkdocs.cnf`) à la racine du dépôt. La configuration s'appelle `mkdocs.cnf` — et pas `mkdocs.yml` — et le site se construit **hors** de l'arbre (`.doctypes-site/` à côté du dépôt) : le moteur lit tout fichier `.yaml`/`.yml`/`.json` de l'arbre comme une définition de DocType, ni la configuration ni le build ne doivent donc vivre dedans.
 
 ## Utilisation dans un plugin xcore
 

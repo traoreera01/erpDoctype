@@ -1,0 +1,82 @@
+# Configuration MkDocs du jeu ERP DocTypes.
+#
+# Le fichier s'appelle `mkdocs.cnf` (et pas `mkdocs.yml`) et le site se
+# construit HORS de l'arbre (`../.doctypes-site`) : `load_dir` du moteur
+# lit TOUT `.yaml|.yml|.json` sous `doctypes/` comme une définition de
+# DocType — ni la config ni le build ne doivent vivre dans l'arbre.
+#
+# Construire : mkdocs build -f mkdocs.cnf   (ou mkdocs serve -f mkdocs.cnf)
+
+site_name: ERP DocTypes
+site_description: >-
+  Les 704 définitions de DocTypes YAML de 22 modules du jeu ERP :
+  architecture des définitions, cartographie des dépendances et guide
+  d'implémentation en plugins xcore-doctype.
+site_url: https://github.com/traoreera01/erpDoctype
+repo_url: https://github.com/traoreera01/erpDoctype
+
+site_dir: ../.doctypes-site
+use_directory_urls: true
+theme:
+  name: readthedocs
+  locale: fr
+  highlightjs: true
+
+markdown_extensions:
+  - tables
+  - admonition
+  - toc:
+      permalink: "#"
+
+nav:
+  - Accueil: index.md
+  - Le jeu de définitions: erp-doctypes.md
+  - Architecture des définitions: architecture.md
+  - Dépendances entre modules: dependances.md
+  - Implémenter un module: integration.md
+  - Modules:
+      - Comptabilité (accounts): modules/accounts.md
+      - Immobilisations (assets): modules/assets.md
+      - Traitement en masse (bulk_transaction): modules/bulk_transaction.md
+      - Achats (buying): modules/buying.md
+      - Communication (communication): modules/communication.md
+      - CRM (crm): modules/crm.md
+      - EDI (edi): modules/edi.md
+      - Intégrations ERPNext (erpnext_integrations): modules/erpnext_integrations.md
+      - Ressources humaines (hr): modules/hr.md
+      - Maintenance (maintenance): modules/maintenance.md
+      - Fabrication (manufacturing): modules/manufacturing.md
+      - Paie (payroll): modules/payroll.md
+      - Projets (projects): modules/projects.md
+      - Qualité (quality_management): modules/quality_management.md
+      - Régionalisation (regional): modules/regional.md
+      - Ventes (selling): modules/selling.md
+      - Configuration (setup): modules/setup.md
+      - Stock (stock): modules/stock.md
+      - Sous-traitance (subcontracting): modules/subcontracting.md
+      - Support (support): modules/support.md
+      - Téléphonie (telephony): modules/telephony.md
+      - Utilitaires (utilities): modules/utilities.md
+  - Référence des champs:
+      - Comptabilité (accounts): reference/accounts.md
+      - Immobilisations (assets): reference/assets.md
+      - Traitement en masse (bulk_transaction): reference/bulk_transaction.md
+      - Achats (buying): reference/buying.md
+      - Communication (communication): reference/communication.md
+      - CRM (crm): reference/crm.md
+      - EDI (edi): reference/edi.md
+      - Intégrations ERPNext (erpnext_integrations): reference/erpnext_integrations.md
+      - Ressources humaines (hr): reference/hr.md
+      - Maintenance (maintenance): reference/maintenance.md
+      - Fabrication (manufacturing): reference/manufacturing.md
+      - Paie (payroll): reference/payroll.md
+      - Projets (projects): reference/projects.md
+      - Qualité (quality_management): reference/quality_management.md
+      - Régionalisation (regional): reference/regional.md
+      - Ventes (selling): reference/selling.md
+      - Configuration (setup): reference/setup.md
+      - Stock (stock): reference/stock.md
+      - Sous-traitance (subcontracting): reference/subcontracting.md
+      - Support (support): reference/support.md
+      - Téléphonie (telephony): reference/telephony.md
+      - Utilitaires (utilities): reference/utilities.md
